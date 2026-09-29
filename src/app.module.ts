@@ -9,6 +9,7 @@ import { AuthModule } from './auth/auth.module.js';
 import { envSchema } from './config/env.schema.js';
 import { ExampleModule } from './modules/example/example.module.js';
 import { PrismaModule } from './prisma/prisma.module.js';
+import { TaskModule } from './modules/Tasks/task.module.js';
 
 @Module({
 	imports: [
@@ -26,6 +27,7 @@ import { PrismaModule } from './prisma/prisma.module.js';
 		PrismaModule,
 		AuthModule,
 		ExampleModule,
+		TaskModule
 	],
 	controllers: [AppController],
 	providers: [AppService],

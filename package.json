@@ -12,7 +12,7 @@
 	"scripts": {
 		"dev": "nest start --watch --preserveWatchOutput",
 		"build": "nest build",
-		"start": "node dist/main.js",
+		"start": "node dist/src/main.js",
 		"check": "biome check .",
 		"check:fix": "biome check . --write",
 		"check-types": "tsc --noEmit",
