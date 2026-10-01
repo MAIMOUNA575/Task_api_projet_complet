@@ -1,11 +1,8 @@
 name: Local
 variables:
-  - name: token
-    value: ""
-    description: ""
   - name: userId
-    value: ""
-    description: ""
+    value: tJULUOs3iYpeHOeqfkJQumjqbP4Ptoke
   - name: taskId
-    value: ""
-    description: ""
+    value: cmumu1qwt0002n8tgtoe7bwaq
+  - name: token
+    value: lF8WvBkDCvMMNKLqhInQpv6nagSqBD6f

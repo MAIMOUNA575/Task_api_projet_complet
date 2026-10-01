@@ -1,11 +1,11 @@
 info:
-  name: Register
+  name: Login
   type: http
-  seq: 1
+  seq: 2
 
 http:
   method: POST
-  url: "{{base_url}}/api/auth/sign-up/email"
+  url: "{{base_url}}/api/auth/sign-in/email"
   body:
     type: json
     data: |-
@@ -32,9 +32,16 @@ runtime:
           expect(res.getBody().token).to.be.a("string");
         });
 
+        test("user present", function () {
+          expect(res.getBody().user).to.be.an("object");
+        });
+
         test("email correspond à la requête", function () {
-          const requestBody = req.getBody();
-          expect(res.getBody().user.email).to.equal(requestBody.email);
+          expect(res.getBody().user.email).to.equal(req.getBody().email);
+        });
+
+        test("id utilisateur present", function () {
+          expect(res.getBody().user.id).to.be.a("string");
         });
 
 settings:
